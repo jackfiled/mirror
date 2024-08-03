@@ -1,0 +1,17 @@
+name: Mirror repos
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Run mirror script
+        run: |
+          sh ./entrypoint.sh
+        env:
+          GIT_PASSWORD: ${{ secrets.GIT_PASSWORD }}
