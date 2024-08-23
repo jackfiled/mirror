@@ -16,3 +16,13 @@ git config --global credential.helper cache
 git clone --bare https://git.rrricardo.top/jackfiled/leetcode.git
 cd leetcode.git
 git push --mirror https://github.com/jackfiled/leetcode-rust.git
+cd ..
+
+# Mirror YaeBlog repo
+#
+git clone --bare https://git.rrricardo.top/jackfiled/YaeBlog.git
+cd YaeBlog.git
+git lfs fetch --all
+git lfs push --all https://github.com/jackfiled/YaeBlog.git
+git push --mirror https://github.com/jackfiled/YaeBlog.git
+cd ..
