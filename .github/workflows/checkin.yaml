@@ -1,0 +1,23 @@
+name: Checkin for Glados
+on:
+  push:
+    branches: [ master ]
+  schedule:
+    - cron: "45 0 * * *"
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Setup dotnet runtime
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-verion: "8"
+      - name: Run checkin script
+        run: |
+          dotnet fsi Glados.fsx
+        env:
+          GLADOS_COOKIE: ${{ secrets.GLADOS_COOKIE }}
