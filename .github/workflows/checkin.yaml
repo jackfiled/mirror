@@ -15,7 +15,7 @@ jobs:
       - name: Setup dotnet runtime
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-verion: "8"
+          dotnet-version: "8"
       - name: Run checkin script
         run: |
           dotnet fsi Glados.fsx
