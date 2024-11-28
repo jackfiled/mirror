@@ -2,7 +2,7 @@
 set -e
 
 if [[ "${DEBUG}" -eq "true" ]]; then
-    set -x
+  set -x
 fi
 
 # Set git configurations
@@ -32,4 +32,11 @@ cd ..
 git clone --bare https://git.rrricardo.top/jackfiled/LeetCodeSharp.git
 cd LeetCodeSharp.git
 git push --mirror https://github.com/jackfiled/LeetCodeSharp.git
+cd ..
+
+# Mirror BUPTBachelorThesis
+
+git clone --bare https://git.rrricardo.top/jackfiled/BUPTBachelorThesis.git
+cd BUPTBachelorThesis.git
+git push --mirror https://github.com/jackfiled/BUPTBachelorThesis.git
 cd ..
