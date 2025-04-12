@@ -34,9 +34,3 @@ cd LeetCodeSharp.git
 git push --mirror https://github.com/jackfiled/LeetCodeSharp.git
 cd ..
 
-# Mirror BUPTBachelorThesis
-
-git clone --bare https://git.rrricardo.top/jackfiled/BUPTBachelorThesis.git
-cd BUPTBachelorThesis.git
-git push --mirror https://github.com/jackfiled/BUPTBachelorThesis.git
-cd ..
